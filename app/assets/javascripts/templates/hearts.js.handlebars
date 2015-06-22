@@ -1,0 +1,20 @@
+<div class='container-fluid'>
+    <div class='row-fluid'>
+    
+       <h1>Heart Diseases</h1>
+   
+
+<p>  heart and its related diseases are the number killer in the western world</p>
+
+<ul>
+  {{#each}}
+  <li>{{#link-to 'heart' this}}{{name}} {{/link-to}}</li>
+
+  {{/each}}
+  </ul>
+
+      {{outlet}}
+      
+      
+    </div>
+  </div>

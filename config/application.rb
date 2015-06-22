@@ -22,5 +22,10 @@ module Healthy
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    
+    ActiveModel::Serializer.setup do |config|
+       config.embed = :ids
+        config.embed_in_root = true
+     end
   end
 end

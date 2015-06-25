@@ -7,11 +7,13 @@
 <p>  heart and its related diseases are the number killer in the western world</p>
 
 <ul>
-  {{#each }}
-  <li>{{#link-to 'heart' this}}{{name}} {{/link-to}}</li>
+  {{#each}}
+  <li>{{#link-to 'heart' this}} {{name}} {{/link-to}}</li>
 
   {{/each}}
   </ul>
+
+  <p> {{#link-to 'hearts.new'}} Create a new Heart's Health {{/link-to}}</p>
 
       {{outlet}}
       

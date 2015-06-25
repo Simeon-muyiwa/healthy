@@ -11,6 +11,10 @@ class HeartsController < ApplicationController
 	  render json: Heart.create(heart_params)
 	end
 
+	def update
+		render json: Heart.find(params[:id]).tap {|h| h.update_attributes(heart_params)}
+	end
+
  private
   def heart_params
   	params.require(:heart).permit(:name, :body)
